@@ -21,23 +21,23 @@ function backgroundSound(audioName, loop) {
   audio.play();
 }
 
-backgroundSound("../sound/background-sound.mp3", true);
+backgroundSound("./sound/background-sound.mp3", true);
 
 aboutBtn.addEventListener("click", () => {
   showModal();
-  backgroundSound("../sound/about-sound.mp3", false);
+  backgroundSound("./sound/about-sound.mp3", false);
 });
 
 closeModal.addEventListener("click", () => {
   hideModal();
-  backgroundSound("../sound/about-sound.mp3", false);
+  backgroundSound("./sound/about-sound.mp3", false);
 });
 
 startBtn.addEventListener("click", () => {
-  backgroundSound("../sound/button-sound.mp3", false);
+  backgroundSound("./sound/button-sound.mp3", false);
 });
 
 overlay.addEventListener("click", () => {
   hideModal();
-  backgroundSound("../sound/about-sound.mp3", false);
+  backgroundSound("./sound/about-sound.mp3", false);
 });
