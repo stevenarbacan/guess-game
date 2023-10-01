@@ -30,7 +30,7 @@ function backgroundSound(audioName, loop) {
   audio.play();
 }
 
-backgroundSound("../sound/background-sound.mp3", true);
+backgroundSound("./sound/background-sound.mp3", true);
 
 init();
 
@@ -46,13 +46,13 @@ const openModal = (playerScore) => {
   modal.classList.remove("hidden");
   overlay.classList.remove("hidden");
   modalText.textContent = `\nYour score: ${playerScore}\nHighest score: ${playerHighScore}\nCongratulations, You win the game🏆!`;
-  backgroundSound("../sound/congratulations-sound.mp3", false);
+  backgroundSound("./sound/congratulations-sound.mp3", false);
 };
 
 const hideModal = () => {
   modal.classList.add("hidden");
   overlay.classList.add("hidden");
-  backgroundSound("../sound/button-sound.mp3", false);
+  backgroundSound("./sound/button-sound.mp3", false);
 };
 
 numberBtn.addEventListener("click", () => {
@@ -75,20 +75,20 @@ numberBtn.addEventListener("click", () => {
       }
     }
   }
-  backgroundSound("../sound/button-sound.mp3", false);
+  backgroundSound("./sound/button-sound.mp3", false);
 });
 
 resetBtn.addEventListener("click", () => {
   init();
   score.textContent = playerScore;
-  backgroundSound("../sound/button-sound.mp3", false);
+  backgroundSound("./sound/button-sound.mp3", false);
 });
 
 closeModal.addEventListener("click", () => {
   hideModal();
-  backgroundSound("../sound/button-sound.mp3", false);
+  backgroundSound("./sound/button-sound.mp3", false);
 });
 overlay.addEventListener("click", () => {
   hideModal();
-  backgroundSound("../sound/button-sound.mp3", false);
+  backgroundSound("./sound/button-sound.mp3", false);
 });
